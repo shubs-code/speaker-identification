@@ -1,0 +1,6 @@
+
+# convert mp3 to wav
+ffmpeg -i input.mp3 -ac 1 -ar 16000 output.wav
+
+# take audio sampe 
+ffmpeg -ss 00:01:30 -i input.wav -t 10 -acodec copy sample.wav
