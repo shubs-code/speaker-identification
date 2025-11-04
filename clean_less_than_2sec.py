@@ -2,7 +2,7 @@ import os
 from pydub import AudioSegment
 
 # === CONFIGURATION ===
-folder = "/media/shrubex/f6b29291-706a-4909-a36a-5a835513826a/research/cv-corpus-22.0-delta-2025-06-20/hi/data2"
+folder = "./cv-corpus-22.0-delta-2025-06-20/hi/data2"
 min_duration_ms = 2000     # 2 seconds in milliseconds
 
 count_deleted = 0

@@ -2,8 +2,8 @@ import os
 from pydub import AudioSegment
 
 # === CONFIGURATION ===
-input_folder = "/media/shrubex/f6b29291-706a-4909-a36a-5a835513826a/research/cv-corpus-22.0-delta-2025-06-20/hi/data1"     # folder with your .mp3 files
-output_folder = "/media/shrubex/f6b29291-706a-4909-a36a-5a835513826a/research/cv-corpus-22.0-delta-2025-06-20/hi/data2"      # folder for 3-sec .wav chunks
+input_folder = "./cv-corpus-22.0-delta-2025-06-20/hi/data1"     # folder with your .mp3 files
+output_folder = "./cv-corpus-22.0-delta-2025-06-20/hi/data2"      # folder for 3-sec .wav chunks
 segment_length = 3 * 1000             # 3 seconds in milliseconds
 
 os.makedirs(output_folder, exist_ok=True)

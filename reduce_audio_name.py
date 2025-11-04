@@ -2,8 +2,8 @@ import os
 import re
 
 # === CONFIGURATION ===
-input_folder = "/media/shrubex/f6b29291-706a-4909-a36a-5a835513826a/research/cv-corpus-22.0-delta-2025-06-20/hi/data"       # folder containing your prefixed mp3 files
-output_folder = "/media/shrubex/f6b29291-706a-4909-a36a-5a835513826a/research/cv-corpus-22.0-delta-2025-06-20/hi/data1"   # new folder for renamed clips
+input_folder = "./cv-corpus-22.0-delta-2025-06-20/hi/data"       # folder containing your prefixed mp3 files
+output_folder = "./cv-corpus-22.0-delta-2025-06-20/hi/data1"   # new folder for renamed clips
 
 os.makedirs(output_folder, exist_ok=True)
 

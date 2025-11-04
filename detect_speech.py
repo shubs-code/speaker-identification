@@ -4,7 +4,7 @@ import torchaudio
 from tqdm import tqdm
 
 # === CONFIG ===
-folder = "/media/shrubex/f6b29291-706a-4909-a36a-5a835513826a/research/cv-corpus-22.0-delta-2025-06-20/hi/data2"   # Folder containing your WAV files
+folder = "./cv-corpus-22.0-delta-2025-06-20/hi/data2"   # Folder containing your WAV files
 sample_rate = 16000         # Expected sample rate for the model
 threshold = 0.3             # Minimum proportion of speech frames to consider as 'speech'
 

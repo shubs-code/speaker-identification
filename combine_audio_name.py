@@ -3,9 +3,9 @@ import shutil
 import pandas as pd
 
 # === CONFIGURATION ===
-tsv_path = "/media/shrubex/f6b29291-706a-4909-a36a-5a835513826a/research/cv-corpus-22.0-delta-2025-06-20/hi/other.tsv"         # path to your TSV file
-clips_folder = "/media/shrubex/f6b29291-706a-4909-a36a-5a835513826a/research/cv-corpus-22.0-delta-2025-06-20/hi/clips"            # folder with your original mp3s
-output_folder = "/media/shrubex/f6b29291-706a-4909-a36a-5a835513826a/research/cv-corpus-22.0-delta-2025-06-20/hi/data"   # folder where renamed files will be saved
+tsv_path = "./cv-corpus-22.0-delta-2025-06-20/hi/other.tsv"         # path to your TSV file
+clips_folder = "./cv-corpus-22.0-delta-2025-06-20/hi/clips"            # folder with your original mp3s
+output_folder = "./cv-corpus-22.0-delta-2025-06-20/hi/data"   # folder where renamed files will be saved
 
 # === STEP 1: Load the TSV ===
 df = pd.read_csv(tsv_path, sep='\t')
