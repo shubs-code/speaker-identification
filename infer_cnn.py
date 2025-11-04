@@ -30,11 +30,15 @@ def extract_mfcc(file_path, sr=SAMPLE_RATE, duration=DURATION, n_mfcc=N_MFCC):
 
 def predict_speaker(file_path):
     mfcc = extract_mfcc(file_path)
-    if mfcc is None:
-        return "Error processing file"
-    mfcc = mfcc[np.newaxis, ..., np.newaxis]
-    pred = model.predict(mfcc)
-    label = encoder.inverse_transform([np.argmax(pred)])[0]
-    return label
+    mfcc = mfcc[np.newaxis, ..., np.newaxis]  # shape (1, n_mfcc, time, 1)
+    preds = model.predict(mfcc)
+    top_idx = np.argmax(preds)
+    speaker = encoder.inverse_transform([top_idx])[0]
+    confidence = float(preds[0][top_idx]) * 100  # convert to percentage
+    return speaker, confidence
 
-print(predict_speaker("./cv-corpus-22.0-delta-2025-06-20/hi/data1/client_006_common_voice_hi_43388577.mp3"))
+# Example usage
+file_path = "./cv-corpus-22.0-delta-2025-06-20/hi/data1/client_002_common_voice_hi_43100869.mp3"
+speaker, confidence = predict_speaker(file_path)
+print(f"Predicted Speaker: {speaker}, Confidence: {confidence:.2f}%")
+
